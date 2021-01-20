@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <pozadina />
-      <div class="main-wrapper">
-        <div class="nav-bar">
-          <Header/>
-        </div>
-        <Footer/>
-      </div>      
+    <div class="main-wrapper">
+      <div class="content-wrapper">
+          <div class="header">
+            <Header/>
+          </div>
+          <div class="footer">
+            <Footer/>
+          </div>
+      </div>
+    </div>      
   </div>
 </template>
 
@@ -27,15 +31,7 @@ export default {
     return {
       item1: []
     }
-  },  
-  methods: {
-    //rentThisBook: function (item) {
-      //this.$emit('rentedBooks', item)
-   // },
-    renderItem(item) {
-      this.item1.push({...item})
-    }
-  }
+  },
 }
 </script>
 
@@ -56,6 +52,16 @@ export default {
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-align: center;
     color: #2c3e50;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-bar {
+    width: 810px;
+    margin: 0;
+    padding: 0;
   }
 
   .collection {
@@ -84,13 +90,25 @@ export default {
     color: gray;
     background-color: gray;
     opacity: 0.5;
-    width: 80%;
-    display: inline-block;
+    width: 1110px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     height: 1600px;
     border-radius: 5px;
     margin: 0;
     padding: 0;
+    border-radius: 15px;
   }
-   
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 auto;
+  }
+
+  .footer {
+    display: flex;
+    flex-shrink: 0;
+  }
 </style>
