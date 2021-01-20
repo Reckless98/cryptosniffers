@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-      <h4>Footer</h4>
+      <h4>Footer nata</h4>
   </div>
 </template>
 
