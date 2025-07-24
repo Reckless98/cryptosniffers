@@ -1,31 +1,27 @@
 <template>
-  <div id="app">
-    <Header/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Footer/>
+  <div id="app" class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-900 dark:to-dark-800">
+    <NavBar />
+    <main class="container mx-auto px-4 py-6">
+      <router-view />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import { defineComponent } from 'vue'
+import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
-    Header,
+    NavBar,
     Footer
   }
-}
+})
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Global styles are now in style.css */
 </style>
